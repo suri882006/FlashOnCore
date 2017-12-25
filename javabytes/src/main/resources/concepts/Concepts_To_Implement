@@ -1,0 +1,10 @@
+Overriding toString() method
+Method Signatures - Overloading (check if return type/exception matters)
+check if method parameter types matter at the time of overriding a method in sub class from base class
+Using covariant return types (available since Java 1.5)
+
+using upcasting and downcasting
+analyse why casting between String and StringBuffer is not possible like String str= (String) new StringBuffer("hi");
+check usage of instanceof
+
+

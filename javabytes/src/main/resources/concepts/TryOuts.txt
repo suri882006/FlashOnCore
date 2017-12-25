@@ -1,0 +1,70 @@
+public class A
+{ 
+    void A() /* Line 3 */
+    {
+        System.out.println("Class A"); 
+    } 
+    public static void main(String[] args) 
+    { 
+        new A(); 
+    } 
+}
+
+-------------
+
+public class Test 
+{  
+    public static void main(String args[])
+    { 
+        class Foo 
+        {
+            public int i = 3;
+        } 
+        Object o = (Object)new Foo();
+        Foo foo = (Foo)o;
+        System.out.println("i = " + foo.i);
+    }
+}
+
+ans - i=3
+
+
+------------
+
+import java.awt.Button;
+class CompareReference 
+{
+    public static void main(String [] args) 
+    {
+        float f = 42.0f;
+        float [] f1 = new float[2];
+        float [] f2 = new float[2];
+        float [] f3 = f1;
+        long x = 42;
+        f1[0] = 42.0f;
+    }
+}
+
+-------------
+
+public class MyOuter 
+{
+    public static class MyInner 
+    {
+        public static void foo() { }
+    }
+}
+
+--------------
+
+public Object m() 
+{  
+    Object o = new Float(3.14F); 
+    Object [] oa = new Object[l];
+    oa[0] = o; /* Line 5 */
+    o = null;  /* Line 6 */
+    oa[0] = null; /* Line 7 */
+    return o; /* Line 8 */
+}
+
+When is the Float object, created in line 3, eligible for garbage collection?
